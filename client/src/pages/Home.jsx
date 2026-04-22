@@ -9,9 +9,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const timeoutId = setTimeout(() => {
-            fetchEvents();
-        }, 400); // 400ms debounce
+        const timeoutId = setTimeout(() => { fetchEvents(); }, 400); // 400ms debounce
         return () => clearTimeout(timeoutId);
     }, [search]);
 
@@ -81,7 +79,7 @@ const Home = () => {
 
             <div className="flex items-center justify-between mb-8 px-2 border-b border-gray-200 pb-4">
                 <h2 className="text-3xl font-extrabold text-gray-900">Upcoming Events</h2>
-                <div className="text-gray-500 font-medium">{events.length} results found</div>
+                <div className="text-white-500 font-medium">{events.length} results found</div>
             </div>
 
             {loading ? (
@@ -138,7 +136,7 @@ const Home = () => {
                     <FaTicketAlt className="text-gray-800 text-2xl" />
                     <span className="text-xl font-bold text-gray-900">Eventora</span>
                 </div>
-                <p className="text-gray-500 text-sm mb-6 max-w-md mx-auto">
+                <p className="text-white-500 text-sm mb-6 max-w-md mx-auto">
                     The simplest, most dynamic way to manage, discover, and host world-class events in your local city. Let's make memories together.
                 </p>
                 <div className="text-xs text-gray-400 font-medium uppercase tracking-wider">

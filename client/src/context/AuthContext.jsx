@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import api from '../utils/axios';
-
+// Context is utilised globally rather than manually writing it everytime...
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
